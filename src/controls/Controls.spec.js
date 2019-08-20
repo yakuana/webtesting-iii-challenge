@@ -2,8 +2,7 @@
 
 // react imports 
 import React from "react";
-import renderer from "react-test-renderer"; 
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";  
 
 // components 
@@ -13,11 +12,12 @@ describe("<Controls />", () => {
 
     it("controls default to 'unlocked' and 'open'", () => {
 
-      const { getByTestId } = render(<Controls />);
-      
-      // intial render should have buttons with the text Lock Gate and Close Gate 
-      expect(getByTestId("un-lock-gate-btn")).toHaveTextContent(/Lock Gate/i);
-      expect(getByTestId("open-close-gate-btn")).toHaveTextContent(/Close Gate/i);
+        // rendered Contorls component    
+        const { getByTestId } = render(<Controls />);
+        
+        // intial render should have buttons with the text Lock Gate and Close Gate 
+        expect(getByTestId("un-lock-gate-btn")).toHaveTextContent(/Lock Gate/i);
+        expect(getByTestId("open-close-gate-btn")).toHaveTextContent(/Close Gate/i);
 
     });
 
