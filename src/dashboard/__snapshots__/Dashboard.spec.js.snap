@@ -7,11 +7,13 @@ Array [
   >
     <div
       className="led green-led"
+      data-testid="display-un-lock"
     >
       Unlocked
     </div>
     <div
       className="led green-led"
+      data-testid="display-opn-close"
     >
       Open
     </div>
